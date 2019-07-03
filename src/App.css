@@ -13,6 +13,17 @@
   height: 40vmin;
   pointer-events: none;
 }
+.App-li {
+  background-color: dimgrey;
+  padding: 3px
+}
+
+.App-button {
+  background-color: darkslategray;
+  margin:5px;
+  padding: 10px;
+  width:200px;
+}
 
 .App-header {
   background-color: #282c34;
@@ -25,6 +36,9 @@
   color: white;
 }
 .App-body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #282c34;
   padding: 20px;
   color: white;

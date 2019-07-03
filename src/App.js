@@ -2,6 +2,7 @@
 CODIGO APENAS PARA ESTUDO
 ****************************** */
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 // Lista usada no exemplo de interação #2
 const listaDeObjetos = [
@@ -33,7 +34,8 @@ function App() {
 
   function adicioinandoObjeto() {
     // 👍 adicioinando um objeto a lista com o que foi digitado no txtExemplo.
-    addItem([...listaDeObjetos, {nome:text}]);
+    //addItem([...listaDeObjetos, {nome:text}]);
+    addItem(itens.concat({nome:text}));
   }
 
   /* ******************************
@@ -54,17 +56,17 @@ function App() {
           {text}
         </div>
         <div>
-          <button id="btnContar" onClick={contadorDeClick.bind(this)}>
+          <button id="btnContar" className="App-button" onClick={contadorDeClick.bind(this)}>
             Contar {count}
          </button>
         </div>
         <div>
-          <button id="btnAdicionar" onClick={adicioinandoObjeto.bind(this)}>
+          <button id="btnAdicionar" className="App-button"  onClick={adicioinandoObjeto.bind(this)}>
             Adicionar esse item a lista: {text}
          </button>
-         <ul>
+         <ul >
             {
-              itens.map(item => <li>{item.nome}</li>)
+              itens.map(item => <li className="App-li">{item.nome}</li>)
             }
          </ul>
         </div>
