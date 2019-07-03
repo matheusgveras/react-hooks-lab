@@ -6,9 +6,9 @@ import './App.css';
 
 // Lista usada no exemplo de interação #2
 const listaDeObjetos = [
-  {nome:'beltrano'}, 
-  {nome:'fulano'}, 
-  {nome:'cicrano'}
+  { nome: 'beltrano' },
+  { nome: 'fulano' },
+  { nome: 'cicrano' }
 ];
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   ✅ Alterando e incrementando textos usando useState
   ******************************* */
   // inicia com uma valor padrão;
-  const [text, setText] = useState('Olá mundo'); 
+  const [text, setText] = useState('Olá mundo');
   const [count, setCount] = useState(0);
   const [itens, addItem] = useState(listaDeObjetos);
 
@@ -35,7 +35,7 @@ function App() {
   function adicioinandoObjeto() {
     // 👍 adicioinando um objeto a lista com o que foi digitado no txtExemplo.
     //addItem([...listaDeObjetos, {nome:text}]);
-    addItem(itens.concat({nome:text}));
+    addItem(itens.concat({ nome: text }));
   }
 
   /* ******************************
@@ -50,28 +50,44 @@ function App() {
     <div className="App">
       <div className="App-body">
         <h3>Alterando o texto e contando com useState </h3>
+        {/* *****************************************************
+        Bloco #1 
+        ***************************************************** */}
         <div>
-          <input id="txtExemplo" className="App-textbox" onChange={alterandoTexto} placeholder="Digite qualquer coisa" value={text} />
-          <br/> 
+          <input id="txtExemplo" 
+          className="App-textbox" 
+          onChange={alterandoTexto} 
+          placeholder="Digite qualquer coisa" 
+          value={text} />
+          <br />
           {text}
         </div>
+        {/* *****************************************************
+          Bloco #2 
+         ***************************************************** */}
         <div>
-          <button id="btnContar" className="App-button" onClick={contadorDeClick.bind(this)}>
+          <button id="btnContar" 
+          className="App-button" 
+          onClick={contadorDeClick.bind(this)}>
             Contar {count}
-         </button>
+          </button>
         </div>
+        {/* *****************************************************
+          Bloco #3 
+         ***************************************************** */}
         <div>
-          <button id="btnAdicionar" className="App-button"  onClick={adicioinandoObjeto.bind(this)}>
+          <button id="btnAdicionar" 
+          className="App-button" 
+          onClick={adicioinandoObjeto.bind(this)}>
             Adicionar esse item a lista: {text}
-         </button>
-         <ul >
+          </button>
+          <ul >
             {
               itens.map(item => <li className="App-li">{item.nome}</li>)
             }
-         </ul>
+          </ul>
         </div>
       </div>
-      
     </div>
   );
 }
