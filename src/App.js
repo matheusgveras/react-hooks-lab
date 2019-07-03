@@ -42,8 +42,8 @@ function App() {
   ✅ Disparando o useEffect cada vez que o state é alterado. 
   ******************************* */
   useEffect(() => {
-    console.log(`Você entrou com o texto ${text} e clicou no botao ${count}x`)
-    console.log(`Sua lista possui: ${itens.length} itens`)
+    console.log(`💡 Você entrou com o texto ${text} e clicou no botao ${count}x`)
+    console.log(`💡 Sua lista possui: ${itens.length} itens`)
   });
 
   return (
@@ -51,7 +51,7 @@ function App() {
       <div className="App-body">
         <h3>Alterando o texto e contando com useState </h3>
         {/* *****************************************************
-        Bloco #1 
+        Bloco #1 💡 
         ***************************************************** */}
         <div>
           <input id="txtExemplo" 
@@ -63,7 +63,7 @@ function App() {
           {text}
         </div>
         {/* *****************************************************
-          Bloco #2 
+          Bloco #2 💡 
          ***************************************************** */}
         <div>
           <button id="btnContar" 
@@ -73,7 +73,7 @@ function App() {
           </button>
         </div>
         {/* *****************************************************
-          Bloco #3 
+          Bloco #3 💡 
          ***************************************************** */}
         <div>
           <button id="btnAdicionar" 
